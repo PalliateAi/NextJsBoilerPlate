@@ -77,27 +77,25 @@ const FormSignup = ({}) => {
       <FormContainer>
         <h1 style={{ color: "#fff" }}>We'd love to hear from you</h1>
         <FormWrapper>
-          <form noValidate>
-            <FormInputs>
-              <FormLabel>Name</FormLabel>
-              <FormField placeholder="Name" type="text" name="username" />
-            </FormInputs>
-            <FormInputs>
-              <FormLabel>Email</FormLabel>
-              <FormField
-                type="email"
-                name="email"
-                placeholder="Enter your email"
-              />
-            </FormInputs>
+          <FormInputs>
+            <FormLabel>Name</FormLabel>
+            <FormField placeholder="Name" type="text" name="username" />
+          </FormInputs>
+          <FormInputs>
+            <FormLabel>Email</FormLabel>
+            <FormField
+              type="email"
+              name="email"
+              placeholder="Enter your email"
+            />
+          </FormInputs>
 
-            <FormInputs>
-              <FormLabel>Message</FormLabel>
-              <FormText type="text" name="message" />
-            </FormInputs>
+          <FormInputs>
+            <FormLabel>Message</FormLabel>
+            {/* <FormText type="text" name="message" /> */}
+          </FormInputs>
 
-            <SendBtn>Send Message</SendBtn>
-          </form>
+          {/* <SendBtn>Send Message</SendBtn> */}
         </FormWrapper>
       </FormContainer>
     </FormContentRight>

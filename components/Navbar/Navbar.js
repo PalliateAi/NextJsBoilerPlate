@@ -10,7 +10,6 @@ import logo from "../../public/logo-removebg.png";
 
 const Nav = styled.nav`
   height: 80px;
-  /* margin-top: -80px; */
   color: #fff;
   display: flex;
   justify-content: center;
@@ -116,7 +115,7 @@ const Navbar = ({ toggle }) => {
       <IconContext.Provider value={{ color: "#000" }}>
         <Nav scrollNav={scrollNav}>
           <NavbarContainer>
-            <NavLogo href="/" onClick={toggleHome}>
+            <NavLogo onClick={toggleHome}>
               <Image
                 src={logo}
                 alt="Scruffs2Crufts Tonbridge"
