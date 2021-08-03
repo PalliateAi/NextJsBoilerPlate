@@ -84,7 +84,7 @@ const FormSignup = ({ submitForm }) => {
       <FormContainer>
         <h1 style={{ color: "#fff" }}>We'd love to hear from you</h1>
         <FormWrapper>
-          <form onSubmit={handleSubmit} className="form" noValidate>
+          <form onSubmit={handleSubmit} noValidate>
             <FormInputs>
               <FormLabel>Name</FormLabel>
               <FormField
@@ -94,8 +94,6 @@ const FormSignup = ({ submitForm }) => {
                 value={values.username}
                 onChange={handleChange}
               />
-
-              {errors.username && <p>{errors.username}</p>}
             </FormInputs>
             <FormInputs>
               <FormLabel>Email</FormLabel>
@@ -106,8 +104,6 @@ const FormSignup = ({ submitForm }) => {
                 value={values.email}
                 onChange={handleChange}
               />
-
-              {errors.email && <p>{errors.email}</p>}
             </FormInputs>
 
             <FormInputs>
@@ -120,7 +116,7 @@ const FormSignup = ({ submitForm }) => {
               />
             </FormInputs>
 
-            <SendBtn type="submit">Send Message</SendBtn>
+            <SendBtn>Send Message</SendBtn>
           </form>
         </FormWrapper>
       </FormContainer>

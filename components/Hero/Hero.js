@@ -98,7 +98,7 @@ const Hero = () => {
           We provide a tailored grooming service for you and your dog’s needs.
         </HeroP>
         <HeroBtnWrapper>
-          <Button to="contact" offset={-200} onClick={toggleBottom}>
+          <Button to="contact" offset={-80} onClick={toggleBottom}>
             Contact Us
           </Button>
         </HeroBtnWrapper>
