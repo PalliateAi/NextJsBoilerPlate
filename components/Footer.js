@@ -65,14 +65,14 @@ const Footer = () => {
               </WebsiteRights>
               <SocialIcons>
                 <SocialIconLink
-                  href={"//www.eddyku.com/"}
+                  href={"//www.facebook.com/Scruffs2CruftsTonbridge/"}
                   target="_blank"
                   aria-label="Facebook"
                 >
                   <FaFacebook />
                 </SocialIconLink>
                 <SocialIconLink
-                  href={"//www.eddyku.com/"}
+                  href={"//www.instagram.com/scruffs2cruftstonbridge/"}
                   target="_blank"
                   aria-label="Instagram"
                 >

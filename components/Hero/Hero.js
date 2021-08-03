@@ -63,7 +63,7 @@ const HeroP = styled.p`
   font-size: 30px;
   text-align: center;
   max-width: 600px;
-  text-shadow: 3px 3px #000;
+  text-shadow: 2px 2px #000;
 
   @media screen and (max-width: 768px) {
     font-size: 24px;

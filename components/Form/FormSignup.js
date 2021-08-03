@@ -57,6 +57,7 @@ const SendBtn = styled.button`
   border: none;
   color: #fff;
   font-size: 1rem;
+  cursor: pointer;
 `;
 
 const FormText = styled.textarea`
@@ -95,7 +96,7 @@ const FormSignup = ({}) => {
             <FormText type="text" name="message" />
           </FormInputs> */}
 
-          <SendBtn>Send Message</SendBtn>
+          <SendBtn to="/">Send Message</SendBtn>
         </FormWrapper>
       </FormContainer>
     </FormContentRight>
