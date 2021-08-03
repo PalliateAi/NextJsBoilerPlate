@@ -77,7 +77,7 @@ const FormSignup = ({}) => {
       <FormContainer>
         <h1 style={{ color: "#fff" }}>We'd love to hear from you</h1>
         <FormWrapper>
-          <FormInputs>
+          {/* <FormInputs>
             <FormLabel>Name</FormLabel>
             <FormField placeholder="Name" type="text" name="username" />
           </FormInputs>
@@ -92,10 +92,10 @@ const FormSignup = ({}) => {
 
           <FormInputs>
             <FormLabel>Message</FormLabel>
-            {/* <FormText type="text" name="message" /> */}
-          </FormInputs>
+            <FormText type="text" name="message" />
+          </FormInputs> */}
 
-          {/* <SendBtn>Send Message</SendBtn> */}
+          <SendBtn>Send Message</SendBtn>
         </FormWrapper>
       </FormContainer>
     </FormContentRight>
