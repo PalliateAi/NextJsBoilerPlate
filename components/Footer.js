@@ -31,17 +31,6 @@ const SocialMediaWrap = styled.div`
   margin: 40px auto 0 auto;
 `;
 
-const SocialLogo = styled(Link)`
-  color: #fff;
-  justify-self: start;
-  cursor: pointer;
-  text-decoration: none;
-  font-size: 1.5rem;
-  display: flex;
-  align-items: center;
-  margin-bottom: 16px;
-  font-weight: bold;
-`;
 const WebsiteRights = styled.small`
   color: #fff;
   margin-bottom: 16px;
@@ -65,26 +54,14 @@ const SocialIconLink = styled.a`
 `;
 
 const Footer = () => {
-  const toggleHome = () => {
-    scroll.scrollToTop();
-  };
   return (
     <>
       <FooterContainer>
         <FooterWrap>
           <SocialMedia>
             <SocialMediaWrap>
-              {/* <SocialLogo to="/" onClick={toggleHome}>
-                <Image
-                  src={logo}
-                  alt="Scruffs2Crufts Tonbridge"
-                  width={200}
-                  height={70}
-                />
-              </SocialLogo> */}
               <WebsiteRights>
                 Scruffs2Crufts Tonbridge &copy; {new Date().getFullYear()}
-                All rights reserved.
               </WebsiteRights>
               <SocialIcons>
                 <SocialIconLink

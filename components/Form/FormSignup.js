@@ -1,6 +1,4 @@
 import React from "react";
-import validate from "./validateInfo";
-import useForm from "./useForm";
 import styled from "styled-components";
 
 const FormContentRight = styled.div`
@@ -73,27 +71,16 @@ const FormText = styled.textarea`
   font-family: "arial";
 `;
 
-const FormSignup = ({ submitForm }) => {
-  const { handleChange, handleSubmit, values, errors } = useForm(
-    submitForm,
-    validate
-  );
-
+const FormSignup = ({}) => {
   return (
     <FormContentRight>
       <FormContainer>
         <h1 style={{ color: "#fff" }}>We'd love to hear from you</h1>
         <FormWrapper>
-          <form onSubmit={handleSubmit} noValidate>
+          <form noValidate>
             <FormInputs>
               <FormLabel>Name</FormLabel>
-              <FormField
-                placeholder="Name"
-                type="text"
-                name="username"
-                value={values.username}
-                onChange={handleChange}
-              />
+              <FormField placeholder="Name" type="text" name="username" />
             </FormInputs>
             <FormInputs>
               <FormLabel>Email</FormLabel>
@@ -101,19 +88,12 @@ const FormSignup = ({ submitForm }) => {
                 type="email"
                 name="email"
                 placeholder="Enter your email"
-                value={values.email}
-                onChange={handleChange}
               />
             </FormInputs>
 
             <FormInputs>
               <FormLabel>Message</FormLabel>
-              <FormText
-                type="text"
-                name="message"
-                value={values.message}
-                onChange={handleChange}
-              />
+              <FormText type="text" name="message" />
             </FormInputs>
 
             <SendBtn>Send Message</SendBtn>
