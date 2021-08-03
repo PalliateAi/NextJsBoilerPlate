@@ -3,6 +3,8 @@ import React from "react";
 import { FaTimes } from "react-icons/fa";
 import { Link as LinkR } from "react-router-dom";
 import { Link as LinkS } from "react-scroll";
+import Image from "next/image";
+import logo from "../../public/logo.png";
 
 const SidebarContainer = styled.aside`
   position: fixed;
@@ -35,6 +37,11 @@ const Icon = styled.div`
 
 const SidebarWrapper = styled.div`
   color: #fff;
+`;
+
+const LogoWrapper = styled.div`
+  text-align: center;
+  margin-top: 3rem;
 `;
 
 const SidebarMenu = styled.ul`
@@ -99,6 +106,14 @@ const Sidebar = ({ isOpen, toggle }) => {
         <CloseIcon />
       </Icon>
       <SidebarWrapper>
+        <LogoWrapper>
+          <Image
+            src={logo}
+            alt="ScruffsScruffs2Crufts Tonbridge"
+            width={150}
+            height={50}
+          />
+        </LogoWrapper>
         <SidebarMenu>
           <SidebarLink to="about" onClick={toggle}>
             About

@@ -1,13 +1,24 @@
 import styled from "styled-components";
+import { Link } from "react-scroll";
 
-const ButtonStyle = styled.button`
-  font-size: 1em;
-  margin: 1em;
-  padding: 0.25em 1em;
-  border-radius: 20px;
+export const Button = styled(Link)`
+  background: ${({ primary }) => (primary ? "#773344" : "#773344")};
+  border-radius: 50px;
+  white-space: nowrap;
+  padding: ${({ big }) => (big ? "14px 48px" : "12px 30px")};
+  color: ${({ dark }) => (dark ? "#010606" : "#fff")};
+  font: ${({ fontBig }) => (fontBig ? "20px" : "16px")};
+  outline: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    transition: all 0.2s ease-in-out;
+    background: ${({ primary }) => (primary ? "fff" : "#E3B5A4")};
+    color: ${({ dark }) => (dark ? "#010606" : "#000")};
+  }
 `;
-const Button = () => {
-  return <ButtonStyle>Contact Us</ButtonStyle>;
-};
-
-export default Button;

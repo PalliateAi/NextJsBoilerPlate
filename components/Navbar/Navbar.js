@@ -1,21 +1,24 @@
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
-// import Link from "next/link";
 import { Link as LinkR } from "react-router-dom";
 import { Link as LinkS } from "react-scroll";
 import { FaBars } from "react-icons/fa";
+import { IconContext } from "react-icons/lib";
+import { animateScroll as scroll } from "react-scroll";
 import Image from "next/image";
-import logo from "../../public/logo.png";
+import logo from "../../public/logo-removebg.png";
 
 const Nav = styled.nav`
   height: 80px;
-
   /* margin-top: -80px; */
   color: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 1rem;
-  position: sticky;
+  position: fixed;
+  background: #f5e9e2;
+  width: 100%;
   top: 0;
   z-index: 10;
 
@@ -85,74 +88,101 @@ const NavLinks = styled(LinkS)`
   cursor: pointer;
 
   &.active {
-    border-bottom: 3px solid #01bf71;
-  }
-`;
-
-const NavBtn = styled.nav`
-  display: flex;
-  align-items: center;
-
-  @media screen and (max-width: 768px) {
-    display: none;
-  }
-`;
-
-const NavBtnLink = styled(LinkR)`
-  border-radius: 50px;
-  background: #01bf71;
-  white-space: nowrap;
-  padding: 10px 22px;
-  color: #010606;
-  font-size: 16px;
-  outline: none;
-  border: none;
-  cursor: pointer;
-  transition: all 0.2s ease-in-out;
-  text-decoration: none;
-
-  &:hover {
-    transition: all 0.2s ease-in-out;
-    background: #fff;
-    color: #010606;
+    border-bottom: 3px solid #773344;
   }
 `;
 
 const Navbar = ({ toggle }) => {
+  const [scrollNav, setScrollNav] = useState(false);
+
+  const changeNav = () => {
+    if (window.scrollY >= 80) {
+      setScrollNav(true);
+    } else {
+      setScrollNav(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", changeNav);
+  }, []);
+
+  const toggleHome = () => {
+    scroll.scrollToTop();
+  };
+
   return (
     <>
-      <Nav>
-        <NavbarContainer>
-          <NavLogo href="/">
-            <Image
-              src={logo}
-              alt="ScruffsScruffs2Crufts Tonbridge"
-              width={200}
-              height={70}
-            />
-          </NavLogo>
-          <MobileIcon onClick={toggle}>
-            <FaBars />
-          </MobileIcon>
-          <NavMenu>
-            <NavItem>
-              <NavLinks to="about">About</NavLinks>
-            </NavItem>
-            <NavItem>
-              <NavLinks to="pricing">Pricing</NavLinks>
-            </NavItem>
-            <NavItem>
-              <NavLinks to="reviews">Reviews</NavLinks>
-            </NavItem>
-            <NavItem>
-              <NavLinks to="contact">Contact Us</NavLinks>
-            </NavItem>
-          </NavMenu>
-          {/* <NavBtn>
+      <IconContext.Provider value={{ color: "#000" }}>
+        <Nav scrollNav={scrollNav}>
+          <NavbarContainer>
+            <NavLogo href="/" onClick={toggleHome}>
+              <Image
+                src={logo}
+                alt="Scruffs2Crufts Tonbridge"
+                width={200}
+                height={70}
+              />
+            </NavLogo>
+            <MobileIcon onClick={toggle}>
+              <FaBars />
+            </MobileIcon>
+            <NavMenu>
+              <NavItem>
+                <NavLinks
+                  to="home"
+                  smooth={true}
+                  duration={500}
+                  spy={true}
+                  exact="true"
+                  offset={-80}
+                >
+                  Home
+                </NavLinks>
+              </NavItem>
+              <NavItem>
+                <NavLinks
+                  to="pricing"
+                  smooth={true}
+                  duration={500}
+                  spy={true}
+                  exact="true"
+                  offset={-80}
+                >
+                  Pricing
+                </NavLinks>
+              </NavItem>
+              <NavItem>
+                <NavLinks
+                  to="reviews"
+                  smooth={true}
+                  duration={500}
+                  spy={true}
+                  exact="true"
+                  offset={-80}
+                >
+                  Reviews
+                </NavLinks>
+              </NavItem>
+              <NavItem>
+                <NavLinks
+                  to="contact"
+                  smooth={true}
+                  duration={500}
+                  spy={true}
+                  exact="true"
+                  offset={-80}
+                >
+                  Contact Us
+                </NavLinks>
+              </NavItem>
+            </NavMenu>
+            {/* <NavBtn>
             <NavBtnLink to="/signin">Sign in</NavBtnLink>
           </NavBtn> */}
-        </NavbarContainer>
-      </Nav>
+          </NavbarContainer>
+        </Nav>
+      </IconContext.Provider>
     </>
   );
 };

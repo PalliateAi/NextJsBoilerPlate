@@ -1,5 +1,9 @@
 import Head from "next/head";
+import Form from "../components/Form/Form";
 import Hero from "../components/Hero/Hero";
+import Pricing from "../components/Pricing/Pricing";
+import { homeObjOne } from "../components/Reviews/Data";
+import Review from "../components/Reviews/Review";
 
 export default function Home() {
   return (
@@ -10,6 +14,9 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Hero />
+      <Pricing />
+      <Review {...homeObjOne} />
+      <Form />
     </>
   );
 }
