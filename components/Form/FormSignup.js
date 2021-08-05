@@ -5,6 +5,11 @@ const FormContentRight = styled.div`
   border-radius: 0 10px 10px 0;
   position: relative;
   background: linear-gradient(90deg, rgb(40, 40, 40) 0%, rgb(17, 17, 17) 100%);
+
+  @media screen and (max-width: 1000px) {
+    border-radius: 0px;
+    background: #f5e9e2;
+  }
 `;
 
 const FormContainer = styled.form`
@@ -20,6 +25,23 @@ const FormContainer = styled.form`
   align-items: center;
 `;
 
+const FormImg = styled.img`
+  width: 70%;
+  height: 20%;
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+`;
+
+const FormH1 = styled.h1`
+  color: #fff;
+
+  @media screen and (max-width: 1000px) {
+    color: #000;
+  }
+`;
+
 const FormWrapper = styled.div`
   width: 450px;
   margin-left: 5rem;
@@ -28,6 +50,7 @@ const FormWrapper = styled.div`
 const FormInputs = styled.div`
   margin-bottom: 0.5rem;
   width: 80%;
+  height: 80px;
 `;
 
 const FormLabel = styled.label`
@@ -35,6 +58,10 @@ const FormLabel = styled.label`
   font-size: 0.8rem;
   margin-bottom: 6px;
   color: #fff;
+
+  @media screen and (max-width: 1000px) {
+    color: #000;
+  }
 `;
 
 const FormField = styled.input`
@@ -50,8 +77,8 @@ const FormField = styled.input`
 const SendBtn = styled.button`
   width: 80%;
   height: 50px;
-  margin-top: 10px;
-  border-radius: 2px;
+  margin-top: 30px;
+  border-radius: 50px;
   background: #773344;
   outline: none;
   border: none;
@@ -76,11 +103,12 @@ const FormSignup = ({}) => {
   return (
     <FormContentRight>
       <FormContainer>
-        <h1 style={{ color: "#fff" }}>We'd love to hear from you</h1>
+        <FormImg src="logo-removebg.png" alt="spaceship" />
+        <FormH1>We'd love to hear from you</FormH1>
         <FormWrapper>
-          {/* <FormInputs>
+          <FormInputs>
             <FormLabel>Name</FormLabel>
-            <FormField placeholder="Name" type="text" name="username" />
+            <FormField placeholder="Name" type="text" />
           </FormInputs>
           <FormInputs>
             <FormLabel>Email</FormLabel>
@@ -94,7 +122,7 @@ const FormSignup = ({}) => {
           <FormInputs>
             <FormLabel>Message</FormLabel>
             <FormText type="text" name="message" />
-          </FormInputs> */}
+          </FormInputs>
 
           <SendBtn to="/">Send Message</SendBtn>
         </FormWrapper>
