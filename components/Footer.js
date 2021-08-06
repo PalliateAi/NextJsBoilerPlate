@@ -3,6 +3,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { animateScroll as scroll } from "react-scroll";
 import { FaFacebook, FaInstagram } from "react-icons/fa";
+import { SiGooglemaps } from "react-icons/si";
 
 const FooterContainer = styled.footer`
   background-color: #773344;
@@ -45,7 +46,7 @@ const SocialIcons = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 65px;
+  width: 100px;
 `;
 
 const SocialIconLink = styled.a`
@@ -63,7 +64,15 @@ const Footer = () => {
               <WebsiteRights>
                 Scruffs2Crufts Tonbridge &copy; {new Date().getFullYear()}
               </WebsiteRights>
+
               <SocialIcons>
+                <SocialIconLink
+                  href={"//goo.gl/maps/fSBGfxYA1Gs5jTNZ7"}
+                  target="_blank"
+                  aria-label="Google Maps"
+                >
+                  <SiGooglemaps />
+                </SocialIconLink>
                 <SocialIconLink
                   href={"//www.facebook.com/Scruffs2CruftsTonbridge/"}
                   target="_blank"

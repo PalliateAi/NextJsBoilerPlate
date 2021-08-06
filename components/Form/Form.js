@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import FormSignup from "./FormSignup";
-import FormSuccess from "./FormSuccess";
 import styled from "styled-components";
+import Iframe from "react-iframe";
 
 const FormContainer = styled.div`
   margin: 100px auto;
@@ -32,32 +32,28 @@ const FormContentLeft = styled.div`
   }
 `;
 
-const FormImg = styled.img`
-  width: 80%;
-  height: 80%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+const IframeWrapper = styled.div`
+  width: 100%;
+  height: 100%;
 `;
 
 const Form = () => {
-  const [isSubmitted, setIsSubmitted] = useState(false);
-
-  function submitForm() {
-    setIsSubmitted(true);
-  }
   return (
     <>
       <FormContainer id="contact">
         <FormContentLeft>
-          <FormImg src="icon-2.svg" alt="spaceship" />
+          <IframeWrapper>
+            <Iframe
+              url="https://www.google.com/maps/embed?pb=!1m21!1m12!1m3!1d40016.35133711728!2d0.35322161820697306!3d51.18181820088998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m6!3e6!4m0!4m3!3m2!1d51.1854953!2d0.3624617!5e0!3m2!1sen!2suk!4v1628240708677!5m2!1sen!2suk"
+              width="100%"
+              height="100%"
+              style="border:0;"
+              allowfullscreen=""
+              loading="lazy"
+            />
+          </IframeWrapper>
         </FormContentLeft>
-        {!isSubmitted ? (
-          <FormSignup submitForm={submitForm} />
-        ) : (
-          <FormSuccess />
-        )}
+        <FormSignup />
       </FormContainer>
     </>
   );

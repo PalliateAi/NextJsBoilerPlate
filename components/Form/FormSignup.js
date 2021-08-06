@@ -118,12 +118,10 @@ const FormSignup = ({}) => {
               placeholder="Enter your email"
             />
           </FormInputs>
-
           <FormInputs>
             <FormLabel>Message</FormLabel>
             <FormText type="text" name="message" />
           </FormInputs>
-
           <SendBtn to="/">Send Message</SendBtn>
         </FormWrapper>
       </FormContainer>
