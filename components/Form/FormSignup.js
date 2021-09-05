@@ -101,31 +101,39 @@ const FormText = styled.textarea`
 
 const FormSignup = ({}) => {
   return (
-    <FormContentRight>
-      <FormContainer>
-        <FormImg src="logo-removebg.png" alt="spaceship" />
-        <FormH1>We'd love to hear from you</FormH1>
-        <FormWrapper>
-          <FormInputs>
-            <FormLabel>Name</FormLabel>
-            <FormField placeholder="Name" type="text" />
-          </FormInputs>
-          <FormInputs>
-            <FormLabel>Email</FormLabel>
-            <FormField
-              type="email"
-              name="email"
-              placeholder="Enter your email"
-            />
-          </FormInputs>
-          <FormInputs>
-            <FormLabel>Message</FormLabel>
-            <FormText type="text" name="message" />
-          </FormInputs>
-          <SendBtn to="/">Send Message</SendBtn>
-        </FormWrapper>
-      </FormContainer>
-    </FormContentRight>
+    <>
+      <FormContentRight>
+        <FormContainer>
+          <FormImg src="logo-removebg.png" alt="spaceship" />
+          <FormH1>We'd love to hear from you</FormH1>
+          <FormWrapper>
+            <FormInputs>
+              <FormLabel>Name</FormLabel>
+              <FormField placeholder="Name" type="text" />
+            </FormInputs>
+            <FormInputs>
+              <FormLabel>Email</FormLabel>
+              <FormField
+                type="email"
+                name="email"
+                placeholder="Enter your email"
+              />
+            </FormInputs>
+            <FormInputs>
+              <FormLabel>Message</FormLabel>
+              <FormText type="text" name="message" />
+            </FormInputs>
+            <SendBtn
+              onClick
+              action="https://formsubmit.co/eddy@palliate-ai.com"
+              method="POST"
+            >
+              Send Message
+            </SendBtn>
+          </FormWrapper>
+        </FormContainer>
+      </FormContentRight>
+    </>
   );
 };
 
