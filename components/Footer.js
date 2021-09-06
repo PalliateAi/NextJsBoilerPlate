@@ -57,6 +57,7 @@ const Terms = styled.a`
   color: #fff;
   font-size: 14px;
   margin-right: auto;
+  margin-left: 10px;
 `;
 
 const Policy = styled.a`
@@ -72,10 +73,11 @@ const Footer = () => {
         <FooterWrap>
           <SocialMedia>
             <SocialMediaWrap>
-              <WebsiteRights>
-                Scruffs2Crufts Tonbridge &copy; {new Date().getFullYear()}
-              </WebsiteRights>
               <div style={{ marginRight: "auto" }}>
+                <WebsiteRights>
+                  Scruffs2Crufts Tonbridge &copy; {new Date().getFullYear()}
+                </WebsiteRights>
+
                 <Terms href="terms">Terms</Terms>
                 <Policy href="policy">Policy</Policy>
               </div>
