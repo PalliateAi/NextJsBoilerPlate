@@ -107,7 +107,24 @@ const Navbar = ({ toggle }) => {
   }, []);
 
   const toggleHome = () => {
+    window.location = "/";
     scroll.scrollToTop();
+  };
+
+  const toHome = () => {
+    window.location = "/#home";
+  };
+
+  const toPricing = () => {
+    window.location = "/#pricing";
+  };
+
+  const toReview = () => {
+    window.location = "/#reviews";
+  };
+
+  const toContact = () => {
+    window.location = "/#contact";
   };
 
   return (
@@ -129,6 +146,7 @@ const Navbar = ({ toggle }) => {
             <NavMenu>
               <NavItem>
                 <NavLinks
+                  onClick={toHome}
                   to="home"
                   smooth={true}
                   duration={500}
@@ -141,6 +159,7 @@ const Navbar = ({ toggle }) => {
               </NavItem>
               <NavItem>
                 <NavLinks
+                  onClick={toPricing}
                   to="pricing"
                   smooth={true}
                   duration={500}
@@ -153,6 +172,7 @@ const Navbar = ({ toggle }) => {
               </NavItem>
               <NavItem>
                 <NavLinks
+                  onClick={toReview}
                   to="reviews"
                   smooth={true}
                   duration={500}
@@ -165,6 +185,7 @@ const Navbar = ({ toggle }) => {
               </NavItem>
               <NavItem>
                 <NavLinks
+                  onClick={toContact}
                   to="contact"
                   smooth={true}
                   duration={500}

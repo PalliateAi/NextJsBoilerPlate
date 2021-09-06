@@ -24,7 +24,7 @@ const HeroBg = styled.div`
   overflow: hidden;
 `;
 
-const VideoBg = styled.video`
+const VideoBg = styled.img`
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
@@ -90,7 +90,7 @@ const Hero = () => {
   return (
     <HeroContainer id="home">
       <HeroBg>
-        <VideoBg autoPlay loop muted src="/video.mp4" type="video/mp4" />
+        <VideoBg autoPlay loop muted src="/hero.jpeg" type="jpeg" />
       </HeroBg>
       <HeroContent>
         <HeroH1>Home-based dog grooming salon in Tonbridge</HeroH1>

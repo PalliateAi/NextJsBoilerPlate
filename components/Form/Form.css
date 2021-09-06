@@ -1,0 +1,92 @@
+.FormContentRight {
+  border-radius: 0 10px 10px 0;
+  position: relative;
+  background: linear-gradient(90deg, rgb(40, 40, 40) 0%, rgb(17, 17, 17) 100%);
+
+  @media screen and (max-width: 1000px) {
+    border-radius: 0px;
+    background: #f5e9e2;
+  }
+}
+
+.FormContainer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.FormLabel {
+  display: inline-block;
+  font-size: 0.8rem;
+  margin-bottom: 6px;
+  color: #fff;
+
+  @media screen and (max-width: 1000px) {
+    color: #000;
+  }
+}
+.FormInputs {
+  margin-bottom: 0.5rem;
+  width: 80%;
+  height: 80px;
+}
+
+.FormH1 {
+  color: #fff;
+
+  @media screen and (max-width: 1000px) {
+    color: #000;
+  }
+}
+.FormInputs {
+  margin-bottom: 0.5rem;
+  width: 80%;
+  height: 80px;
+}
+
+.FormWrapper {
+  width: 450px;
+  margin-left: 5rem;
+}
+
+.FormField {
+  display: block;
+  padding-left: 10px;
+  outline: none;
+  border-radius: 2px;
+  height: 40px;
+  width: 100%;
+  border: none;
+}
+
+.FormText {
+  display: block;
+  padding-left: 10px;
+  outline: none;
+  border-radius: 2px;
+  height: 80px;
+  width: 100%;
+  border: none;
+  resize: none;
+  font-family: "arial";
+}
+
+.SendBtn {
+  width: 80%;
+  height: 50px;
+  margin-top: 30px;
+  border-radius: 50px;
+  background: #773344;
+  outline: none;
+  border: none;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+}

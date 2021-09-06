@@ -34,7 +34,6 @@ const SocialMediaWrap = styled.div`
 
 const WebsiteRights = styled.small`
   color: #fff;
-  margin-bottom: 16px;
   margin-right: auto;
 
   @media screen and (max-width: 480px) {
@@ -54,6 +53,18 @@ const SocialIconLink = styled.a`
   font-size: 24px;
 `;
 
+const Terms = styled.a`
+  color: #fff;
+  font-size: 14px;
+  margin-right: auto;
+`;
+
+const Policy = styled.a`
+  color: #fff;
+  font-size: 14px;
+  margin-left: 10px;
+`;
+
 const Footer = () => {
   return (
     <>
@@ -64,7 +75,10 @@ const Footer = () => {
               <WebsiteRights>
                 Scruffs2Crufts Tonbridge &copy; {new Date().getFullYear()}
               </WebsiteRights>
-
+              <div style={{ marginRight: "auto" }}>
+                <Terms href="terms">Terms</Terms>
+                <Policy href="policy">Policy</Policy>
+              </div>
               <SocialIcons>
                 <SocialIconLink
                   href={"//goo.gl/maps/fSBGfxYA1Gs5jTNZ7"}
