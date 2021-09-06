@@ -83,10 +83,7 @@ const HeroBtnWrapper = styled.div`
 
 const Hero = () => {
   var Scroll = require("react-scroll");
-  var scroll = Scroll.animateScroll;
-  const toggleBottom = () => {
-    scroll.scrollToBottom();
-  };
+
   return (
     <HeroContainer id="home">
       <HeroBg>
@@ -98,7 +95,7 @@ const Hero = () => {
           We provide a tailored grooming service for you and your dog’s needs.
         </HeroP>
         <HeroBtnWrapper>
-          <Button to="contact" offset={-80} onClick={toggleBottom}>
+          <Button smooth={true} to="contact" offset={-80}>
             Contact Us
           </Button>
         </HeroBtnWrapper>
