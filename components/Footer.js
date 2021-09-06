@@ -36,8 +36,9 @@ const WebsiteRights = styled.small`
   color: #fff;
   margin-right: auto;
 
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 320px) {
     text-align: center;
+    font-size: 10px;
   }
 `;
 
@@ -51,6 +52,9 @@ const SocialIcons = styled.div`
 const SocialIconLink = styled.a`
   color: #fff;
   font-size: 24px;
+
+  @media screen and (max-width: 320px) {
+  }
 `;
 
 const Terms = styled.a`
@@ -58,12 +62,26 @@ const Terms = styled.a`
   font-size: 14px;
   margin-right: auto;
   margin-left: 10px;
+  @media screen and (max-width: 320px) {
+    font-size: 10px;
+  }
 `;
 
 const Policy = styled.a`
   color: #fff;
   font-size: 14px;
   margin-left: 10px;
+  @media screen and (max-width: 320px) {
+    font-size: 10px;
+  }
+`;
+
+const RightsTermsWrapper = styled.div`
+  margin-right: auto;
+
+  @media screen and (max-width: 320px) {
+    display: flex;
+  }
 `;
 
 const Footer = () => {
@@ -73,14 +91,14 @@ const Footer = () => {
         <FooterWrap>
           <SocialMedia>
             <SocialMediaWrap>
-              <div style={{ marginRight: "auto" }}>
+              <RightsTermsWrapper>
                 <WebsiteRights>
                   Scruffs2Crufts Tonbridge &copy; {new Date().getFullYear()}
                 </WebsiteRights>
 
                 <Terms href="terms">Terms</Terms>
                 <Policy href="policy">Policy</Policy>
-              </div>
+              </RightsTermsWrapper>
               <SocialIcons>
                 <SocialIconLink
                   href={"//goo.gl/maps/fSBGfxYA1Gs5jTNZ7"}
