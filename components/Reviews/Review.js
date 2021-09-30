@@ -5,6 +5,7 @@ import { Button } from "../Button";
 const InfoContainer = styled.div`
   color: #000;
   background: ${({ lightBg }) => (lightBg ? "#f9f9f9" : "#f5e9e2")};
+  margin-top: 2rem;
 
   @media screen and (max-width: 768px) {
     padding: 100px 0;
@@ -14,7 +15,7 @@ const InfoContainer = styled.div`
 const InfoWrapper = styled.div`
   display: grid;
   z-index: 1;
-  height: 860px;
+  height: 700px;
   width: 100%;
   max-width: 1100px;
   margin-right: auto;

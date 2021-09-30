@@ -9,7 +9,11 @@ const FormSignup = ({}) => {
           action="https://formsubmit.co/scruffscruftstonbridge@gmail.com"
           method="POST"
         >
-          <h1 className="FormH1">We'd love to hear from you</h1>
+          <div style={{ textAlign: "center" }}>
+            <h1 className="FormH1">
+              If you are interested in booking an appointment, get in touch.
+            </h1>
+          </div>
           <div className="FormWrapper">
             <div className="FormInputs">
               <label className="FormLabel">Name</label>

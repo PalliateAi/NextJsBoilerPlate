@@ -2,7 +2,6 @@ import React from "react";
 import styled from "styled-components";
 
 const PricingContainer = styled.div`
-  height: 800px;
   display: flex;
   flex-direction: column;
   justify-content: center;
