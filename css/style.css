@@ -480,7 +480,7 @@ ul.social-list li a i {
   margin-left: 20px;
 }
 .testimonial .testimonial-review {
-  margin: 3px 0 0 15px;
+  margin: 40px 20px 20px 15px;
   float: left;
 }
 .testimonial .testimonial-title {
@@ -1243,6 +1243,10 @@ label {
 .border-irregular2 {
   border-radius: 75px 125px 45px 155px/155px 15px 155px 15px;
 } */
+
+.border-irregular1 {
+  width: 50%;
+}
 .border-double {
   border: 10px double;
 }
